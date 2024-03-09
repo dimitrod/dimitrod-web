@@ -1,107 +1,119 @@
-@import '@fontsource/fira-mono';
-
-:root {
-	--font-body: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
-		Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-	--font-mono: 'Fira Mono', monospace;
-	--color-bg-0: rgb(202, 216, 228);
-	--color-bg-1: hsl(209, 36%, 86%);
-	--color-bg-2: hsl(224, 44%, 95%);
-	--color-theme-1: #ff3e00;
-	--color-theme-2: #4075a6;
-	--color-text: rgba(0, 0, 0, 0.7);
-	--column-width: 42rem;
-	--column-margin-top: 4rem;
-	font-family: var(--font-body);
-	color: var(--color-text);
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Lato', sans-serif;
+	font-weight: 600;
 }
 
-body {
-	min-height: 100vh;
-	margin: 0;
-	background-attachment: fixed;
-	background-color: var(--color-bg-1);
-	background-size: 100vw 100vh;
-	background-image: radial-gradient(
-			50% 50% at 50% 50%,
-			rgba(255, 255, 255, 0.75) 0%,
-			#F4B860
-		),
-		linear-gradient(180deg, var(--color-bg-0) 0%, var(--color-bg-1) 15%, var(--color-bg-2) 50%);
-}
-
-h1,
-h2,
-p {
-	font-weight: 400;
-}
-
-p {
-	line-height: 1.5;
-}
-
-a {
-	color: var(--color-theme-1);
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
+span, p, a, input, button, textarea, div {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 500;
 }
 
 h1 {
-	font-size: 2rem;
-	text-align: center;
+	font-size: 4em;
 }
 
 h2 {
-	font-size: 1rem;
+	font-size: 1.5em;
 }
 
-pre {
-	font-size: 16px;
-	font-family: var(--font-mono);
-	background-color: rgba(255, 255, 255, 0.45);
-	border-radius: 3px;
-	box-shadow: 2px 2px 6px rgb(255 255 255 / 25%);
-	padding: 0.5em;
-	overflow-x: auto;
-	color: var(--color-text);
+.front-h1 {
+	font-size:92px;
+	font-weight: 700;
+	font-family: 'Outfit', sans-serif;
 }
 
-.text-column {
+.text-shadow {
+	text-shadow: 2px 2px 1px #000000;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+@keyframes fadeinto {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+.animate {
+	animation: fadeinto 1.5s ease-in-out 1 both;
+}
+
+.animate_logo {
+	animation: fadeinto 3.5s ease-in-out 1 both;
+}
+
+html {
+	scrollbar-gutter: stable;
+}
+
+
+
+.flip-card {
+	background-color: transparent;
+	width: 352px;
+	height: 352px;
+	perspective: 1000px;
+	font-family: sans-serif;
+  }
+  
+  .title {
+	font-size: 2em;
+	font-family: 'Lato', sans-serif;
+	font-weight: 600;
+	text-align: center;
+	margin: 0;
+  }
+  
+  .flip-card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+	transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+	box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+	position: absolute;
 	display: flex;
-	max-width: 48rem;
-	flex: 0.6;
 	flex-direction: column;
 	justify-content: center;
-	margin: 0 auto;
-}
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	border: 1px solid teal;
+	border-radius: 1rem;
+  }
+  
+  .flip-card-front {
+	color: #134e4a;
+  }
+  
+  .flip-card-back {
+	background: linear-gradient(120deg, #134e4a 30%, #0f766e 88%,
+	#2dd4bf 40%, #134e4a 78%);
+	color: white;
+	transform: rotateY(180deg);
+  }
 
-input,
-button {
-	font-size: inherit;
-	font-family: inherit;
-}
-
-button:focus:not(:focus-visible) {
-	outline: none;
-}
-
-@media (min-width: 720px) {
-	h1 {
-		font-size: 2.4rem;
-	}
-}
-
-.visually-hidden {
-	border: 0;
-	clip: rect(0 0 0 0);
-	height: auto;
-	margin: 0;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	width: 1px;
-	white-space: nowrap;
-}
+  .bg-pattern {
+	background-attachment: fixed;
+	background-size: 100vw 100vh;
+	background-image: radial-gradient(
+		70% 70% at 50% 30%,
+		#fff,
+		#d1d5db
+	);
+  }
