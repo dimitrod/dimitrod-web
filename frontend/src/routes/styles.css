@@ -113,7 +113,7 @@ html {
 	background-size: 100vw 100vh;
 	background-image: radial-gradient(
 		70% 70% at 50% 30%,
-		#fff,
-		#d1d5db
+		#392e5e,
+		#000000
 	);
   }

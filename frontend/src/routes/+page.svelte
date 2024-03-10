@@ -1,5 +1,8 @@
 <script>
-	import logo from '$lib/images/logo.png';
+	import logo from '$lib/images/logo_test.png';
+	import {colorText} from '$lib/colors.svelte';
+	import {colorHover} from '$lib/colors.svelte';
+	import {colorHeadings} from '$lib/colors.svelte';
 </script>
 
 <svelte:head>
@@ -9,7 +12,7 @@
 
 <section class="animate container m-auto max-w-screen-md -mt-24">
 	<div class="flex flex-wrap h-[80vh] justify-center items-center mt-24">
-		<h1 class="text-slate-800 font-bold mb-2 flex-1 pb-20 text-right front-h1 mr-[35px] w-2/5">
+		<h1 class="{ colorHeadings } font-bold mb-2 flex-1 pb-20 text-right front-h1 mr-[35px] w-2/5">
 			Hi! I'm
 		</h1>
 		<div class="flex-none animate_logo w-3/5 h-auto">

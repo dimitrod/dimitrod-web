@@ -1,5 +1,8 @@
 <script>
-	import kochbuch_01 from '$lib/images/kochbuch_01.png';
+	import aboutImage from '$lib/images/about_02.png';
+	import {colorText} from '$lib/colors.svelte';
+	import {colorHover} from '$lib/colors.svelte';
+	import {colorHeadings} from '$lib/colors.svelte';
 </script>
 
 <svelte:head>
@@ -18,7 +21,7 @@
                <div class="w-full pr-4 -mt-8">
                   <div class="">
                      <img
-                        src="https://via.placeholder.com/240x360"
+                        src="{aboutImage}"
                         alt=""
                         class="w-full rounded-2xl"
                         />
@@ -28,16 +31,18 @@
          </div>
          <div class="w-2/3">
             <div class="ml-12">
-				<h1 class="text-4xl font-extrabold text-teal-800 pb-4">About me</h1>
-               	<p class="mb-4 lg:mb-8 text-left text-gray-900 sm:text-xl">
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                  The point of using Lorem Ipsum is that it has a more-or-less.
+				<h1 class="text-4xl font-extrabold { colorHeadings } pb-4">About me</h1>
+               	<p class="mb-4 lg:mb-8 text-left { colorText } sm:text-xl">
+                    Born in Bulgaria, raised in Germany, 
+                    I have a bachelor's degree in Intermedia Design 
+                    and am currently enrolled at the HWR Berlin for 
+                    a second bachelor's degree in Computer Science.
                </p>
-               <p class="mb-8 lg:mb-16 text-left text-gray-900 sm:text-xl">
-                  A domain name is one of the first steps to establishing your
-                  brand. Secure a consistent brand image with a domain name that
-                  matches your business.
+               <p class="mb-8 lg:mb-16 text-left { colorText } sm:text-xl">
+                  I'm a jack-of-all-trades, currently interested in
+                  web and software development. Other stuff I like: 
+                  analog photography, board games, cooking and bouldering.
+                  Ask me about my RPG books collection!
                </p>
             </div>
          </div>

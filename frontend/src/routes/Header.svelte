@@ -1,6 +1,9 @@
 <script>
 	import { page } from '$app/stores';
 	import logo from '$lib/images/logo_small.png';
+	import {colorText} from '$lib/colors.svelte';
+	import {colorHover} from '$lib/colors.svelte';
+	import {colorHeadings} from '$lib/colors.svelte';
 </script>
 
 <header class="sticky top-0 flex flex-wrap sm:justify-start sm:flex-nowrap z-50 max-w-screen-md text-sm py-3 sm:py-0 container m-auto bg-pattern">
@@ -16,10 +19,10 @@
 	  </div>
 	  <div class="hidden overflow-hidden transition-all duration-300 basis-full grow sm:block">
 		<div class="flex flex-col gap-y-4 gap-x-0 mt-5 sm:flex-row sm:items-center sm:justify-end sm:gap-y-0 sm:gap-x-7 sm:mt-0 sm:ps-7">
-		  <a class="hover:no-underline font-bold text-[#13262D] hover:text-teal-600 sm:py-6" href="/portfolio">Portfolio</a>
-		  <a class="hover:no-underline font-bold text-[#13262D] hover:text-teal-600 sm:py-6" href="/about">About</a>
-		  <a class="hover:no-underline font-bold text-[#13262D] hover:text-teal-600 sm:py-6" href="/contact">Contact</a>
-		  <a class="hover:no-underline font-bold text-[#13262D] hover:text-teal-600 sm:py-6" href="/imprint">Imprint</a>
+		  <a class="hover:no-underline font-bold { colorText } { colorHover } sm:py-6" href="/portfolio">Portfolio</a>
+		  <a class="hover:no-underline font-bold { colorText } { colorHover } sm:py-6" href="/about">About</a>
+		  <a class="hover:no-underline font-bold { colorText } { colorHover } sm:py-6" href="/contact">Contact</a>
+		  <a class="hover:no-underline font-bold { colorText } { colorHover } sm:py-6" href="/imprint">Imprint</a>
 		</div>
 	  </div>
 	</nav>

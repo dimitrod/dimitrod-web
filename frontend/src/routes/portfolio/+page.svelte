@@ -1,3 +1,9 @@
+<script>
+	import {colorText} from '$lib/colors.svelte';
+	import {colorHover} from '$lib/colors.svelte';
+	import {colorHeadings} from '$lib/colors.svelte';
+</script>
+
 <svelte:head>
 	<title>Portfolio</title>
 	<meta name="description" content="This is my portfolio" />
