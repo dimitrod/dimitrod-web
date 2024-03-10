@@ -18,7 +18,7 @@
       <div class="flex flex-wrap items-center justify-between">
          <div class="w-1/3">
             <div class="flex items-center">
-               <div class="w-full pr-4 -mt-8">
+               <div class="w-full pr-4 -mt-16">
                   <div class="">
                      <img
                         src="{aboutImage}"

@@ -3,6 +3,8 @@
 	import {colorText} from '$lib/colors.svelte';
 	import {colorHover} from '$lib/colors.svelte';
 	import {colorHeadings} from '$lib/colors.svelte';
+
+	let cardColor = 'bg-red-600';
 </script>
 
 <svelte:head>
@@ -18,53 +20,52 @@
 		<div class="flex-none animate_logo w-3/5 h-auto">
 			<img class="w-auto h-auto" src={logo} alt="Dimitar Dimitrov Logo" />
 		</div>
-		<!--<a href="/portfolio" class="animate_logo -mt-48 rounded px-5 py-2.5 overflow-hidden group bg-teal-800 relative hover:bg-gradient-to-r hover:from-teal-800 hover:to-teal-600 text-white hover:ring-2 hover:ring-offset-2 hover:ring-green-400 transition-all ease-out duration-300">
-			<span class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
-			<span class="relative">Show me your projects</span>
-		</a> -->
-		<div class="flex-none flex gap-0 small-card-parent animate_logo w-auto">
-			<div class="flex-none small-card m-auto ">
+		<a href="/portfolio" class="-mt-48 flex-none flex gap-0 small-card-parent animate_logo rounded-lg w-auto overflow-hidden group relative ring-offset-black hover:ring-2 hover:ring-offset-2 hover:ring-pink-500 transition-all ease-out duration-300">
+			<div class="opacity-100 absolute flex justify-center items-center w-full h-full m-auto z-50 text-center align-middle text-white font-bold text-shadow text-xl transition-all ease-out duration-300 group-hover:opacity-0">Portfolio</div>
+			<div class="opacity-0 absolute flex justify-center items-center w-full h-full m-auto z-50 text-center align-middle text-white text-shadow text-xl font-bold transition-all ease-out duration-300 group-hover:opacity-100">Show me!</div>
+			<span class="absolute z-30 right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-30 rotate-12 group-hover:-translate-x-40 ease"></span>
+			<div class="flex-none small-card m-auto">
 				<div class="small-card-inner duration-200">
-					<div class="small-card-front">
+					<div class="small-card-front rounded-l-lg cards-gradient">
 					</div>
-					<div class="small-card-back">
+					<div class="small-card-back bg-yellow-500 rounded-l-lg">
 					</div>
 				</div>
 			</div>
 			<div class="flex-none small-card m-auto ">
 				<div class="small-card-inner duration-300">
-					<div class="small-card-front">
+					<div class="small-card-front cards-gradient">
 					</div>
-					<div class="small-card-back">
+					<div class="small-card-back bg-yellow-500">
 					</div>
 				</div>
 			</div>
 			<div class="flex-none small-card m-auto ">
 				<div class="small-card-inner duration-500">
-					<div class="small-card-front">
+					<div class="small-card-front cards-gradient">
 					</div>
-					<div class="small-card-back">
+					<div class="small-card-back bg-yellow-500">
 					</div>
 				</div>
 			</div>
 			<div class="flex-none small-card m-auto ">
 				<div class="small-card-inner duration-700">
-					<div class="small-card-front">
+					<div class="small-card-front cards-gradient">
 					</div>
-					<div class="small-card-back">
+					<div class="small-card-back bg-yellow-500">
 					</div>
 				</div>
 			</div>
 			<div class="flex-none small-card m-auto ">
 				<div class="small-card-inner duration-1000">
-					<div class="small-card-front">
+					<div class="small-card-front cards-gradient rounded-r-lg">
 					</div>
-					<div class="small-card-back">
+					<div class="small-card-back bg-yellow-500 rounded-r-lg">
 					</div>
 				</div>
 			</div>
 			
-		</div>
+		</a>
 	</div>	
 </section>
 
@@ -91,7 +92,6 @@
   }
   
   .small-card-front, .small-card-back {
-	box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
 	position: absolute;
 	display: flex;
 	flex-direction: column;
@@ -100,18 +100,21 @@
 	height: 100%;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
-	border: 1px solid teal;
-	border-radius: 0.5rem;
   }
   
   .small-card-front {
-	color: #134e4a;
   }
   
   .small-card-back {
-	background: linear-gradient(120deg, #134e4a 30%, #0f766e 88%,
-	#2dd4bf 40%, #134e4a 78%);
-	color: white;
 	transform: rotateY(180deg);
   }
+
+  .cards-gradient {
+	width: 45px;
+	height: 45px;
+	background-image:linear-gradient(45deg, red 0 10%, blue 80% 100%);
+	background-attachment:fixed;
+}
+
+
 </style>
