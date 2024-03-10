@@ -7,6 +7,9 @@
 	import erdulatorTrailer from '$lib/images/erdulator_trailer.png';
 	import kochbuch from '$lib/images/kochbuch.png';
 	import hansHass from '$lib/images/hans_hass.png';
+	import { _getMarkdownPosts } from './+page';
+
+	const foo = _getMarkdownPosts();
 </script>
 
 <svelte:head>
@@ -16,7 +19,26 @@
 <section class="animate container m-auto max-w-screen-md">
 
 	<div class="grid grid-cols-1 md:grid-cols-2 content-center gap-16 pb-24 pt-12">
-		
+<!--
+		{#each (async () => await _getMarkdownPosts()) as post}
+			<a href="/portfolio/{post.postPath}">
+				<div class="flip-card m-auto group">
+					<div class="flip-card-inner">
+						<div class="flip-card-front">
+							<img class="w-full h-full object-cover rounded-lg " src="{ post.image_small }" alt="Placeholder" />
+						</div>
+						<div class="flip-card-back rounded-lg overflow-hidden">
+							<span class="absolute z-30 w-full h-16 transition-all duration-1000 transform translate-y-48 bg-transparent opacity-100 group-hover:-translate-y-16 ease text-white">
+								<p class="title leading-tight text-shadow text-amber-400">{post.title}</p><br>
+								<p class="mx-8">{post.blurb}</p>
+							
+							</span>		
+						</div>
+					</div>
+				</div>
+			</a>
+		{/each}
+-->	
 		<a href="/portfolio/erdulator">
 			<div class="flip-card m-auto group">
 				<div class="flip-card-inner">
@@ -33,6 +55,7 @@
 				</div>
 			</div>
 		</a>
+
 		<a href="/portfolio/erdulator">
 		<div class="flip-card m-auto group">
 			<div class="flip-card-inner">

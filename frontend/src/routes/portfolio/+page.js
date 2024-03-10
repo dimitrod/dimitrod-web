@@ -1,9 +1,21 @@
-import { dev } from '$app/environment';
+export const _getMarkdownPosts = async () => {
+        const allPostFiles = import.meta.glob("../../lib/portfolio-posts/*.md")
+        const iterablePostFiles = Object.entries(allPostFiles)
+    
+        const allPosts = await Promise.all(
+            iterablePostFiles.map(async ([path]) => {
+                    const postPath = path.split('/').at(-1)?.replace('.md', '')
+                    const post = await import(path);
+                    const { title, blurb, image_small} = post.metadata;
 
-// we don't need any JS on this page, though we'll load
-// it in dev so that we get hot module replacement
-export const csr = dev;
-
-// since there's no dynamic data here, we can prerender
-// it so that it gets served as a static asset in production
-export const prerender = true;
+                return {
+                    postPath,
+                    title,
+                    blurb,
+                    image_small
+                }
+            })
+        )
+    
+        return allPosts
+    }

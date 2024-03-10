@@ -10,7 +10,6 @@
 	<meta name="description" content="About this app" />
 </svelte:head>
 
-<!-- ====== About Section Start -->
 <section
    class="animate py-8 lg:py-16 mx-auto max-w-screen-md"
    >
@@ -49,4 +48,3 @@
       </div>
    </div>
 </section>
-<!-- ====== About Section End -->
