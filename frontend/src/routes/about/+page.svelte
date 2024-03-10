@@ -16,7 +16,7 @@
    >
    <div class="container mx-auto">
       <div class="flex flex-wrap items-center justify-between">
-         <div class="w-1/3">
+         <div class="w-0 sm:w-1/3 invisible sm:visible">
             <div class="flex items-center">
                <div class="w-full pr-4 -mt-16">
                   <div class="">
@@ -29,7 +29,7 @@
                </div>
             </div>
          </div>
-         <div class="w-2/3">
+         <div class="w-full sm:w-2/3">
             <div class="ml-12">
 				<h1 class="text-4xl font-extrabold { colorHeadings } pb-4">About me</h1>
                	<p class="mb-4 lg:mb-8 text-left { colorText } sm:text-xl">

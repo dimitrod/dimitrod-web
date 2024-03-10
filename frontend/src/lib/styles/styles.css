@@ -8,6 +8,11 @@ span, p, a, input, button, textarea, div {
 	font-weight: 500;
 }
 
+a {
+	text-decoration: none;
+	color: #d946ef;
+}
+
 h1 {
 	font-size: 4em;
 }

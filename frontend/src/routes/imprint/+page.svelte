@@ -48,7 +48,7 @@
 			<br><br>
 			Bitte richten Sie Ihren Widerspruch formlos an die E-Mail Adresse oben.
 			<br><br>
-			Darüber hinaus haben Sie das Recht auf Datenübertragbarkeit. Sie haben weiter das Recht, sich bei einer Aufsichtsbehörde über die Verarbeitung zu beschweren. Eine Liste der entsprechenden Behörden finden Sie unter: https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html.
+			Darüber hinaus haben Sie das Recht auf Datenübertragbarkeit. Sie haben weiter das Recht, sich bei einer Aufsichtsbehörde über die Verarbeitung zu beschweren. Eine Liste der entsprechenden Behörden finden Sie unter: https://www.bfdi.bund.de/<wbr>DE/Infothek/Anschriften_Links/<wbr>anschriften_links-node.html.
 			<br><br>
 			<h2 class="{ colorHeadings } font-extrabold pt-12 pb-4">Cookies</h2>
 			Wir speichern keine Cookies!

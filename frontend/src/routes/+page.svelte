@@ -14,10 +14,10 @@
 
 <section class="animate container m-auto max-w-screen-md -mt-24">
 	<div class="flex flex-wrap h-[80vh] justify-center items-center mt-24">
-		<h1 class="{ colorHeadings } font-bold mb-2 flex-1 pb-20 text-right front-h1 mr-[35px] w-2/5">
+		<h1 class="{ colorHeadings } font-bold mb-2 flex-1 pb-20 text-right front-h1 mr-[35px] w-0 md:w-2/5 hidden md:inline-block">
 			Hi! I'm
 		</h1>
-		<div class="flex-none animate_logo w-3/5 h-auto">
+		<div class="flex-none animate_logo w-full md:w-3/5 h-auto">
 			<img class="w-auto h-auto" src={logo} alt="Dimitar Dimitrov Logo" />
 		</div>
 		<a href="/portfolio" class="-mt-48 flex-none flex gap-0 small-card-parent animate_logo rounded-lg w-auto overflow-hidden group relative ring-offset-black hover:ring-2 hover:ring-offset-2 hover:ring-pink-500 transition-all ease-out duration-300">

@@ -26,7 +26,7 @@
 					<div class="flip-card-back rounded-lg overflow-hidden">
 						<span class="absolute z-30 w-full h-16 transition-all duration-1000 transform translate-y-48 bg-transparent opacity-100 group-hover:-translate-y-16 ease text-white">
 							<p class="title leading-tight text-shadow text-amber-400">Kochbuch der <br>Minimalistin</p><br>
-							<p>Ein persönliches Projekt für meine Partnerin.</p>
+							<p class="mx-8">A personal project for my partner.</p>
 						
 						</span>		
 					</div>
@@ -42,7 +42,7 @@
 				<div class="flip-card-back rounded-lg overflow-hidden">
 					<span class="absolute z-30 w-full h-16 transition-all duration-1000 transform translate-y-48 bg-transparent opacity-100 group-hover:-translate-y-16 ease text-white">
 						<p class="title leading-tight text-shadow text-amber-400">Erdulator Trailer</p><br>
-						<p>Der Trailer zur neuesten Version von erdulator.de.</p>
+						<p class="mx-8">A trailer for the newest version of erdulator.de</p>
 					</span>
 				</div>
 			</div>
@@ -56,8 +56,8 @@
 				</div>
 				<div class="flip-card-back rounded-lg overflow-hidden">
 					<span class="absolute z-30 w-full h-16 transition-all duration-1000 transform translate-y-48 bg-transparent opacity-100 group-hover:-translate-y-16 ease text-white">
-						<p class="title leading-tight text-shadow text-amber-400">Erdulator Webseite</p><br>
-						<p>Klimawandel - kannst du es besser machen?</p>
+						<p class="title leading-tight text-shadow text-amber-400">Erdulator Website</p><br>
+						<p class="mx-8">An educational climate change webgame, can you do better than our leaders?</p>
 					</span>
 				</div>
 			</div>
@@ -72,7 +72,7 @@
 				<div class="flip-card-back rounded-lg overflow-hidden">
 					<span class="absolute z-30 w-full h-16 transition-all duration-1000 transform translate-y-48 bg-transparent opacity-100 group-hover:-translate-y-16 ease text-white">
 						<p class="title leading-tight text-shadow text-amber-400">An der Seite<br>von Hans Hass</p><br>
-						<p>Geburtstagsgeschenk zum 70. <br>Jubiläum eines Freundes</p>
+						<p class="mx-8">Birthday present for the<br>70th of a friend.</p>
 					</span>
 				</div>
 			</div>
@@ -94,7 +94,7 @@
 	  .title {
 		font-size: 2em;
 		font-family: 'Lato', sans-serif;
-		font-weight: 600;
+		font-weight: 800;
 		text-align: center;
 		margin: 0;
 	  }
