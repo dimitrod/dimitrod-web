@@ -7,9 +7,7 @@
 	import erdulatorTrailer from '$lib/images/erdulator_trailer.png';
 	import kochbuch from '$lib/images/kochbuch.png';
 	import hansHass from '$lib/images/hans_hass.png';
-	import { _getMarkdownPosts } from './+page';
-
-	const foo = _getMarkdownPosts();
+	export let data;
 </script>
 
 <svelte:head>
@@ -18,19 +16,18 @@
 </svelte:head>
 <section class="animate container m-auto max-w-screen-md">
 
-	<div class="grid grid-cols-1 md:grid-cols-2 content-center gap-16 pb-24 pt-12">
-<!--
-		{#each (async () => await _getMarkdownPosts()) as post}
-			<a href="/portfolio/{post.postPath}">
+	<div class="grid grid-cols-1 md:grid-cols-2 content-center gap-16 pb-24 pt-16">
+		{#each data.posts as post}
+			<a href="/portfolio/{post.path}">
 				<div class="flip-card m-auto group">
 					<div class="flip-card-inner">
 						<div class="flip-card-front">
-							<img class="w-full h-full object-cover rounded-lg " src="{ post.image_small }" alt="Placeholder" />
+							<img class="w-full h-full object-cover rounded-lg " src="src/lib/images/{ post.meta.image_small }" alt="Placeholder" />
 						</div>
 						<div class="flip-card-back rounded-lg overflow-hidden">
-							<span class="absolute z-30 w-full h-16 transition-all duration-1000 transform translate-y-48 bg-transparent opacity-100 group-hover:-translate-y-16 ease text-white">
-								<p class="title leading-tight text-shadow text-amber-400">{post.title}</p><br>
-								<p class="mx-8">{post.blurb}</p>
+							<span class="px-6 absolute z-30 w-full h-16 transition-all duration-1000 transform translate-y-48 bg-transparent opacity-100 group-hover:-translate-y-16 ease text-white">
+								<p class="title leading-tight text-shadow text-amber-400">{post.meta.title}</p><br>
+								<p class="">{post.meta.blurb}</p>
 							
 							</span>		
 						</div>
@@ -38,69 +35,6 @@
 				</div>
 			</a>
 		{/each}
--->	
-		<a href="/portfolio/erdulator">
-			<div class="flip-card m-auto group">
-				<div class="flip-card-inner">
-					<div class="flip-card-front">
-						<img class="w-full h-full object-cover rounded-lg " src="{ kochbuch }" alt="Placeholder" />
-					</div>
-					<div class="flip-card-back rounded-lg overflow-hidden">
-						<span class="absolute z-30 w-full h-16 transition-all duration-1000 transform translate-y-48 bg-transparent opacity-100 group-hover:-translate-y-16 ease text-white">
-							<p class="title leading-tight text-shadow text-amber-400">Kochbuch der <br>Minimalistin</p><br>
-							<p class="mx-8">A personal project for my partner.</p>
-						
-						</span>		
-					</div>
-				</div>
-			</div>
-		</a>
-
-		<a href="/portfolio/erdulator">
-		<div class="flip-card m-auto group">
-			<div class="flip-card-inner">
-				<div class="flip-card-front">
-					<img class="w-full h-full object-cover rounded-lg " src="{ erdulatorTrailer }" alt="Placeholder" />
-				</div>
-				<div class="flip-card-back rounded-lg overflow-hidden">
-					<span class="absolute z-30 w-full h-16 transition-all duration-1000 transform translate-y-48 bg-transparent opacity-100 group-hover:-translate-y-16 ease text-white">
-						<p class="title leading-tight text-shadow text-amber-400">Erdulator Trailer</p><br>
-						<p class="mx-8">A trailer for the newest version of erdulator.de</p>
-					</span>
-				</div>
-			</div>
-		</div>
-	</a>
-	<a href="/portfolio/erdulator">
-		<div class="flip-card m-auto group">
-			<div class="flip-card-inner">
-				<div class="flip-card-front">
-					<img class="w-full h-full object-cover rounded-lg " src="{ erdulatorGame }" alt="Placeholder" />
-				</div>
-				<div class="flip-card-back rounded-lg overflow-hidden">
-					<span class="absolute z-30 w-full h-16 transition-all duration-1000 transform translate-y-48 bg-transparent opacity-100 group-hover:-translate-y-16 ease text-white">
-						<p class="title leading-tight text-shadow text-amber-400">Erdulator Website</p><br>
-						<p class="mx-8">An educational climate change webgame, can you do better than our leaders?</p>
-					</span>
-				</div>
-			</div>
-		</div>
-	</a>
-	<a href="/portfolio/erdulator">
-		<div class="flip-card m-auto group">
-			<div class="flip-card-inner">
-				<div class="flip-card-front">
-					<img class="w-full h-full object-cover rounded-lg" src="{ hansHass }" alt="Placeholder" />
-				</div>
-				<div class="flip-card-back rounded-lg overflow-hidden">
-					<span class="absolute z-30 w-full h-16 transition-all duration-1000 transform translate-y-48 bg-transparent opacity-100 group-hover:-translate-y-16 ease text-white">
-						<p class="title leading-tight text-shadow text-amber-400">An der Seite<br>von Hans Hass</p><br>
-						<p class="mx-8">Birthday present for the<br>70th of a friend.</p>
-					</span>
-				</div>
-			</div>
-		</div>
-	</a>
 
 	</div>
 </section>
@@ -145,9 +79,6 @@
 		height: 100%;
 		-webkit-backface-visibility: hidden;
 		backface-visibility: hidden;
-	  }
-	  
-	  .flip-card-front {
 	  }
 	  
 	  .flip-card-back {

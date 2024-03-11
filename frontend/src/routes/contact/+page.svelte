@@ -10,7 +10,7 @@
 </svelte:head>
 
 <section class="animate">
-	<div class="py-8 lg:py-16 mx-auto max-w-screen-md">
+	<div class="py-16 mx-auto max-w-screen-md">
 		<h2 class="mb-4 text-4xl font-extrabold text-left { colorHeadings }">Contact Me</h2>
 		<p class="mb-8 lg:mb-8 text-left { colorText } sm:text-xl">Want to hire me for some cool project? Let's go!</p>
 		<form action="#" class="space-y-8">

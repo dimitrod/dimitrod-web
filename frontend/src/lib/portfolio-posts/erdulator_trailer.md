@@ -2,7 +2,7 @@
 title: Trailer for Erdulator.de 
 blurb: 'A trailer for the newest version of erdulator.de'
 image_small: 'erdulator_trailer.png'
-image_big: 'erdulator_trailer.png'
+image_big: 'erdulator_trailer_big.jpg'
 
 ---
 

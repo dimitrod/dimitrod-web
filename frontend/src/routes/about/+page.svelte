@@ -11,7 +11,7 @@
 </svelte:head>
 
 <section
-   class="animate py-8 lg:py-16 mx-auto max-w-screen-md"
+   class="animate py-16 mx-auto max-w-screen-md"
    >
    <div class="container mx-auto">
       <div class="flex flex-wrap items-center justify-between">

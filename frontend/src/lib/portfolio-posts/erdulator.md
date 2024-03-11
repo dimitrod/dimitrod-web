@@ -2,7 +2,7 @@
 title: Erdulator.de
 blurb: 'An educational climate change webgame, can you do better than our leaders?'
 image_small: 'erdulator_game.png'
-image_big: 'erdulator_game.png'
+image_big: 'erdulator_big.jpg'
 
 ---
 

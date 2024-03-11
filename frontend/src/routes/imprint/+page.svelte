@@ -10,7 +10,7 @@
 </svelte:head>
 
 <section class="animate">
-	<div class="py-8 lg:py-16 text-column mx-auto max-w-screen-md">
+	<div class="py-16 text-column mx-auto max-w-screen-md">
 		<div id="imprint" class="category { colorText }">
 			<h1 class="text-4xl font-extrabold { colorHeadings } pb-4">Imprint</h1>
 
