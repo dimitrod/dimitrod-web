@@ -3,13 +3,11 @@
 	import {colorText} from '$lib/colors.svelte';
 	import {colorHover} from '$lib/colors.svelte';
 	import {colorHeadings} from '$lib/colors.svelte';
-
-	let cardColor = 'bg-red-600';
 </script>
 
 <svelte:head>
 	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<meta name="description" content="Dimitar Dimitrov Portfolio" />
 </svelte:head>
 
 <section class="animate container m-auto max-w-screen-md -mt-24">
@@ -96,14 +94,12 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	width: 100%;
+	width: 105%;
 	height: 100%;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
   }
   
-  .small-card-front {
-  }
   
   .small-card-back {
 	transform: rotateY(180deg);

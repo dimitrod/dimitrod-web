@@ -1,8 +1,9 @@
 ---
 title: Trailer for Erdulator.de 
 blurb: 'A trailer for the newest version of erdulator.de'
+type: video
 image_small: 'erdulator_trailer.png'
-image_big: 'erdulator_trailer_big.jpg'
+big: 'erdulator_trailer.mp4'
 
 ---
 
@@ -10,4 +11,4 @@ Tihs is a trailer for the newest update of our web based climate change game. Co
 
 **Main contributions:** <br />Editing, design, graphics, effects<br /><br />
 
-[**Watch now - YouTube**](https://www.youtube.com/watch?v=vu1xEW2fL38)
+[**Watch now - YouTube or below**](https://www.youtube.com/watch?v=vu1xEW2fL38)

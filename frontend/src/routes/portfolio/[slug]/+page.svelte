@@ -28,11 +28,25 @@
                />
          </div>
       </div>
-      <img
-         src="{ "../../src/lib/images/" + data.image_big}"
-         alt=""
-         class="w-full mt-8 rounded-2xl"
-      />
+      {#if data.type == "image"}
+         <img
+            src="{ "../../src/lib/images/" + data.big}"
+            alt=""
+            class="w-full mt-8 rounded-2xl"
+         />
+      {:else if data.type == "video"}
+         <video class="w-full rounded-2xl cursor-pointer h-[393px] object-cover" poster="{ "../../src/lib/images/" + data.image_small}" controls>
+            <source src="{ "../../src/lib/video/" + data.big}" type="video/mp4">
+            Your browser does not support the video tag.
+            <track kind="captions" />
+         </video>
+      {:else if data.type == "gallery"}
+         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
+            <div>
+                  <img class="h-auto max-w-full rounded-2xl" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt="">
+            </div>
+         </div>
+      {/if}
    </div>
 </section>
 
