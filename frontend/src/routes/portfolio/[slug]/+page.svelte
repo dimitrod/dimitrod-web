@@ -1,4 +1,6 @@
 <script>
+// @ts-nocheck
+
    export let data;
 	import {colorText} from '$lib/colors.svelte';
 	import {colorHover} from '$lib/colors.svelte';
@@ -35,7 +37,7 @@
             class="w-full mt-8 rounded-2xl"
          />
       {:else if data.type == "video"}
-         <video class="w-full rounded-2xl cursor-pointer h-[393px] object-cover" poster="{ "../../src/lib/images/" + data.image_small}" controls>
+         <video class="w-full rounded-2xl cursor-pointer h-[393px] object-cover" poster="{ "../../src/lib/images/" + data.image_small}" controls preload="none" onclick="this.play()">
             <source src="{ "../../src/lib/video/" + data.big}" type="video/mp4">
             Your browser does not support the video tag.
             <track kind="captions" />

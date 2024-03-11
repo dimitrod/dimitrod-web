@@ -19,10 +19,15 @@
 	  </div>
 	  <div class="hidden overflow-hidden transition-all duration-300 basis-full grow sm:block">
 		<div class="flex flex-col gap-y-4 gap-x-0 mt-5 sm:flex-row sm:items-center sm:justify-end sm:gap-y-0 sm:gap-x-7 sm:mt-0 sm:ps-7">
-		  <a class="hover:no-underline font-bold { colorText } { colorHover } sm:py-6" href="/portfolio">Portfolio</a>
-		  <a class="hover:no-underline font-bold { colorText } { colorHover } sm:py-6" href="/about">About</a>
-		  <a class="hover:no-underline font-bold { colorText } { colorHover } sm:py-6" href="/contact">Contact</a>
-		  <a class="hover:no-underline font-bold { colorText } { colorHover } sm:py-6" href="/imprint">Imprint</a>
+			<a class="hover:no-underline font-bold { colorText } { colorHover } sm:py-6" href="/portfolio">Portfolio</a>
+			<a class="hover:no-underline font-bold { colorText } { colorHover } sm:py-6" href="/about">About</a>
+			<a class="hover:no-underline font-bold { colorText } { colorHover } sm:py-6" href="/imprint">Imprint</a>
+			<a class="group { colorText } { colorHover } sm:py-6" href="/contact">	
+				<button class="relative overflow-hidden py-2 px-5 text-sm font-medium text-center text-white rounded-lg bg-fuchsia-800 sm:w-fit focus:outline-none">
+					<span class="absolute right-0 top-0 z-30 w-48 h-16 transition-all duration-700 transform -translate-x-28 bg-yellow-500 group-hover:-translate-x-0 ease"></span>
+					<span class="relative font-bold z-40 text-shadow">Contact</span>
+				</button>
+			</a>
 		</div>
 	  </div>
 	</nav>

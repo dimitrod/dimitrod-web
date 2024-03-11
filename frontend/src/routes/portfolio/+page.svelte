@@ -22,9 +22,9 @@
 				<div class="flip-card m-auto group">
 					<div class="flip-card-inner">
 						<div class="flip-card-front">
-							<img class="w-full h-full object-cover rounded-lg " src="src/lib/images/{ post.meta.image_small }" alt="Placeholder" />
+							<img class="w-full h-full object-cover rounded-xl" src="src/lib/images/{ post.meta.image_small }" alt="Placeholder" />
 						</div>
-						<div class="flip-card-back rounded-lg overflow-hidden">
+						<div class="flip-card-back  border-4 rounded-xl border-amber-400 overflow-hidden">
 							<span class="px-6 absolute z-30 w-full h-16 transition-all duration-1000 transform translate-y-48 bg-transparent opacity-100 group-hover:-translate-y-16 ease text-white">
 								<p class="title leading-tight text-shadow text-amber-400">{post.meta.title}</p><br>
 								<p class="">{post.meta.blurb}</p>

@@ -1,6 +1,6 @@
 ---
 title: An der Seite von Hans Hass
-blurb: 'Birthday present for the 70th of a friend.'
+blurb: 'A present for the 70th birthday of a good friend.'
 type: gallery
 image_small: 'hans_hass.png'
 big: 'hans_hass.png'
