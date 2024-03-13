@@ -26,9 +26,10 @@ app.post('/api/contact', (req, res) => {
     from: 'contact@dimitrod.com', 
     to: 'dimtrod@gmail.com', 
     subject: req.query.subject,
-    html: req.query.text + "<br><br><br>From: " + req.query.from
+    html: req.query.message + "<br><br><br>From: " + req.query.email
   };
-  console.log(message);
+  console.log(req.query);
+  console.log(req.params);
 
   transporter.sendMail(message, (error, info) => {
       if (error) {
