@@ -6,7 +6,6 @@
 
    let str = data.big;
    let array = str.split(',');
-   console.log(array);
 </script>
 
 <svelte:head>
@@ -26,7 +25,7 @@
          </div>
          <div class="col-span-0 sm:col-span-1 hidden sm:inline-block">
             <img
-               src="{ "../../src/lib/images/" + data.image_small}"
+               src="{ "/images/" + data.image_small}"
                alt=""
                class="w-full rounded-2xl"
                />
@@ -34,20 +33,20 @@
       </div>
       {#if data.type == "image"}
          <img
-            src="{ "../../src/lib/images/" + data.big}"
+            src="{ "/images/" + data.big}"
             alt=""
             class="w-full mt-8 rounded-2xl"
          />
       {:else if data.type == "video"}
-         <video class="w-full rounded-2xl cursor-pointer h-[393px] object-cover" poster="{ "../../src/lib/images/" + data.image_small}" controls preload="none" onclick="this.play()">
-            <source src="{ "../../src/lib/video/" + data.big}" type="video/mp4">
+         <video class="w-full rounded-2xl cursor-pointer h-[393px] object-cover" poster="{ "/images/" + data.image_small}" controls preload="none" onclick="this.play()">
+            <source src="{ "/video/" + data.big}" type="video/mp4">
             Your browser does not support the video tag.
             <track kind="captions" />
          </video>
       {:else if data.type == "gallery"}
          <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-8">
             {#each array as item}
-               <img class="h-auto w-full rounded-2xl" src={ "../../src/lib/images/" + item} alt="">
+               <img class="h-auto w-full rounded-2xl" src={ "/images/" + item} alt="">
             {/each}
          </div>
       {/if}
