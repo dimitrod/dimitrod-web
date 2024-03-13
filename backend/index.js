@@ -1,33 +1,39 @@
-const express = require('express')
-const app = express()
+const express = require("express");
+const nodemailer = require('nodemailer');
+const app = express();
+require('dotenv').config();
 
-let notes = [
-    {
-      id: 1,
-      content: "HTML is easy",
-      important: true
-    },
-    {
-      id: 2,
-      content: "Browser can execute only JavaScript",
-      important: false
-    },
-    {
-      id: 3,
-      content: "GET and POST are the most important methods of HTTP protocol",
-      important: true
-    }
-  ]
+app.use(express.json());
 
-  app.get('/', (request, response) => {
-    response.send('<h1>Hello World!</h1>')
-  })
+const port = process.env.PORT || 5000;
+
+app.listen(port, () => {
+    console.log(`Server listening on port ${port}`);
+});
+
+app.post('/api/contact', (req, res) => {
+  let config = {
+    service: 'gmail',    
+    auth: {
+        user: process.env.GMAIL_APP_USER,
+        pass: process.env.GMAIL_APP_PASSWORD 
+     },
+  }
   
-  app.get('/api/notes', (request, response) => {
-    response.json(notes)
-  })
-  
-  const PORT = 3001
-  app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`)
-  })
+  let transporter = nodemailer.createTransport(config);
+
+  let message = {
+    from: 'contact@dimitrod.com', 
+    to: 'dimtrod@gmail.com', 
+    subject: req.query.subject,
+    html: req.query.text + "<br><br><br>From: " + req.query.from
+  };
+  console.log(message);
+
+  transporter.sendMail(message, (error, info) => {
+      if (error) {
+          return console.log(error);
+      }
+      res.status(200).send({ message: "Mail send", message_id: info.messageId });
+  });
+});
