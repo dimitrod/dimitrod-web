@@ -11,7 +11,7 @@
 </script>
 
 <svelte:head>
-	<title>Portfolio</title>
+	<title>Portfolio - D. Dimitrov</title>
 	<meta name="description" content="This is my portfolio" />
 </svelte:head>
 <section class="animate container m-auto max-w-screen-md">

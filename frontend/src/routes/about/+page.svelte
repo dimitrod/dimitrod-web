@@ -6,7 +6,7 @@
 </script>
 
 <svelte:head>
-	<title>About</title>
+	<title>About - D. Dimitrov</title>
 	<meta name="description" content="About this app" />
 </svelte:head>
 

@@ -5,7 +5,7 @@
 </script>
 
 <svelte:head>
-	<title>Contact</title>
+	<title>Contact me - D. Dimitrov</title>
 	<meta name="description" content="Contact me!" />
 </svelte:head>
 

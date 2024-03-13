@@ -7,7 +7,7 @@
 
 <svelte:head>
 	<title>Home</title>
-	<meta name="description" content="Dimitar Dimitrov Portfolio" />
+	<meta name="description" content="Hi, I'm Dimitar Dimitrov" />
 </svelte:head>
 
 <section class="animate container m-auto max-w-screen-md -mt-24">

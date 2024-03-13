@@ -1,9 +1,9 @@
 ---
 title: Kochbuch der Minimalistin
 blurb: 'A personal project for my partner.'
-type: image
+type: gallery
 image_small: 'kochbuch.png'
-big: 'kochbuch.png'
+big: 'kochbuch_01.png,kochbuch_02.png,kochbuch_03.png'
 
 ---
 

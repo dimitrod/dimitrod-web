@@ -5,7 +5,7 @@
 </script>
 
 <svelte:head>
-	<title>Imprint/Datenschutz</title>
+	<title>Imprint/Datenschutz - D. Dimitrov</title>
 	<meta name="description" content="Imprint/Datenschutz for the website" />
 </svelte:head>
 

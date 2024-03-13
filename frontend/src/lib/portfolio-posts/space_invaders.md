@@ -1,9 +1,9 @@
 ---
 title: 'C++ Space Invaders'
 blurb: "A C++ Space Invaders clone expanded from @educ8s's tutorial."
-type: image
+type: gallery
 image_small: 'space_invaders.png'
-big: 'space_invaders_01.png'
+big: 'space_invaders_01.png,space_invaders_02.png'
 
 ---
 

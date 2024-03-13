@@ -1,15 +1,17 @@
 <script>
-// @ts-nocheck
-
    export let data;
 	import {colorText} from '$lib/colors.svelte';
 	import {colorHover} from '$lib/colors.svelte';
 	import {colorHeadings} from '$lib/colors.svelte';
+
+   let str = data.big;
+   let array = str.split(',');
+   console.log(array);
 </script>
 
 <svelte:head>
-	<title>Erdulator</title>
-	<meta name="description" content="A page about the erdulator.de project" />
+	<title>{data.title} - D. Dimitrov</title>
+	<meta name="description" content="{data.blurb}" />
 </svelte:head>
 
 <section class="animate py-16 mx-auto max-w-screen-md">
@@ -43,10 +45,10 @@
             <track kind="captions" />
          </video>
       {:else if data.type == "gallery"}
-         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
-            <div>
-                  <img class="h-auto max-w-full rounded-2xl" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt="">
-            </div>
+         <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-8">
+            {#each array as item}
+               <img class="h-auto w-full rounded-2xl" src={ "../../src/lib/images/" + item} alt="">
+            {/each}
          </div>
       {/if}
    </div>
