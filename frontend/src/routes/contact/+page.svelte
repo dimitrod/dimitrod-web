@@ -9,7 +9,7 @@
 
 	async function sendMail () {
 
-    const res = await fetch('http://0.0.0.0:5000/api/contact/?email=' + email + '&subject=' + subject + '&message=' + message, {
+    const res = await fetch('https://dimitrod.com/api/contact/?email=' + email + '&subject=' + subject + '&message=' + message, {
         method: 'POST',
         headers:{
             'Content-Type':'x-www-form-urlencoded',
