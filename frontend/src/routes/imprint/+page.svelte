@@ -38,7 +38,7 @@
 			Sollten Sie per E-Mail mit uns Kontakt aufnehmen, werden die mitgeteilten Daten von uns gespeichert, um Ihr Anliegen zu bearbeiten.
 			<br><br>
 			Zu den verarbeiteten Daten zählen:<br>
-			[Ihr Name]<br>
+			Ggf. [Ihr Name]<br>
 			[Ihre E-Mail-Adresse]<br>
 			<br>
 			Wir werden die Daten löschen, sobald die Speicherung nicht mehr erforderlich ist oder die Verarbeitung einschränken, falls gesetzliche Aufbewahrungspflichten bestehen.
