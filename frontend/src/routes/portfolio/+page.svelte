@@ -12,58 +12,77 @@
 	<meta name="description" content="This is my portfolio" />
 </svelte:head>
 <section class="animate container m-auto max-w-screen-md">
+	<div class="grid grid-cols-1 md:grid-cols-2 content-center gap-16 pb-24 pt-16">
 
-	<a href="/" class="mt-8 mr-8 grid grid-cols-5 gap-0 small-card-parent animate_logo rounded-lg w-1/2 overflow-hidden group relative ring-offset-black hover:ring-2 hover:ring-offset-2 hover:ring-pink-500 transition-all ease-out duration-300">
-		<span class="absolute z-30 right-0 w-8 h-48 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-30 rotate-12 group-hover:-translate-x-40 ease"></span>
+	{#each data.posts as post}
+	<a href="/portfolio/{post.path}" class="mt-8 mr-8 grid grid-cols-5 gap-0 small-card-parent rounded-lg w-[354px] overflow-hidden group relative ring-offset-black hover:ring-2 hover:ring-offset-2 hover:ring-pink-500 transition-all ease-out duration-300">
+		<!--<span class="absolute z-30 right-0 w-8 h-48 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-30 rotate-12 group-hover:-translate-x-40 ease"></span>-->
 		
 		{#each Array(5) as _, j}
 			<div class="col-span-1 w-auto m-0 p-0">
 				{#each Array(5) as _, i}
-				<div class="small-card m-auto">
-					<div class="small-card-inner duration-200">
-						<div class="overflow-hidden small-card-front cards-gradient">
-							
-							{#if i == 0}
-								<img alt="Test" class="absolute top-0 left-[-{ j * 70 }px] min-w-[354px] h-[354px]" src="{erdImage}" >
-							{:else}
-								<img alt="Test" class="absolute top-f{ i * 70 } left-f{ j * 70 } min-w-[354px] h-[354px]" src="{erdImage}" >
-							{/if}
+				<div class="small-card">
 
-							
+					{#if i == 0}
+						<div class="w-full small-card-inner small-card-inner-neg duration-150">
+							<div class="overflow-hidden small-card-front cards-gradient">	
+								<img alt="{post.meta.title}" class="absolute top-f{ i * 70 } left-f{ j * 70 } min-w-[355px] h-[355px]" src="/images/{ post.meta.image_small }" >
 						</div>
-						<div class="small-card-back bg-yellow-500">
+						<div class="small-card-back small-card-back-neg bg-violet-950">
 						</div>
 					</div>
+     				{:else if i == 1}
+					 	<div class="w-full small-card-inner small-card-inner-neg duration-200">
+							<div class="overflow-hidden small-card-front cards-gradient">	
+								<img alt="{post.meta.title}" class="absolute top-f{ i * 70 } left-f{ j * 70 } min-w-[355px] h-[355px]" src="/images/{ post.meta.image_small }" >
+						</div>
+						<div class="small-card-back small-card-back-neg bg-violet-950">
+						</div>
+					</div>
+					{:else if i == 2}
+						<div class="w-full small-card-inner small-card-inner-neg duration-300">
+							<div class="overflow-hidden small-card-front cards-gradient">	
+								<img alt="{post.meta.title}" class="absolute top-f{ i * 70 } left-f{ j * 70 } min-w-[355px] h-[355px]" src="/images/{ post.meta.image_small }" >
+						</div>
+						<div class="small-card-back small-card-back-neg bg-violet-950">
+						</div>
+					</div>
+					{:else if i == 3}
+						<div class="w-full small-card-inner small-card-inner-neg duration-500">
+							<div class="overflow-hidden small-card-front cards-gradient">	
+								<img alt="{post.meta.title}" class="absolute top-f{ i * 70 } left-f{ j * 70 } min-w-[355px] h-[355px]" src="/images/{ post.meta.image_small }" >
+						</div>
+						<div class="small-card-back small-card-back-neg bg-violet-950">
+						</div>
+					</div>
+					{:else}
+						<div class="w-full small-card-inner small-card-inner-neg duration-700">
+							<div class="overflow-hidden small-card-front cards-gradient">	
+								<img alt="{post.meta.title}" class="absolute top-f{ i * 70 } left-f{ j * 70 } min-w-[355px] h-[355px]" src="/images/{ post.meta.image_small }" >
+						</div>
+						<div class="small-card-back small-card-back-neg bg-violet-950">
+						</div>
+					</div>
+					{/if}
+
+
+
+						
 				</div>
 				{/each}
 				
 			</div>
 		{/each}
+		<div class="absolute opacity-0 p-16 z-50 group-hover:opacity-100 ease duration-300 w-[354px] h-[354px] portfolio-back">
+			<p class="title align-middle leading-tight text-center text-shadow text-white text-shadow">{post.meta.title}</p><br>
+			<p class="text-center align-middle text-amber-400">{post.meta.blurb}</p>
+							
+		</div>
+
+
 	</a>
  
-
-
-
-
-	<div class="grid grid-cols-1 md:grid-cols-2 content-center gap-16 pb-24 pt-16">
-		{#each data.posts as post}
-			<a href="/portfolio/{post.path}">
-				<div class="flip-card m-auto group">
-					<div class="flip-card-inner">
-						<div class="flip-card-front">
-							<img class="w-full h-full object-cover rounded-xl" src="/images/{ post.meta.image_small }" alt="Placeholder" />
-						</div>
-						<div class="flip-card-back  border-4 rounded-xl border-amber-400 overflow-hidden">
-							<span class="px-6 absolute z-30 w-full h-16 transition-all duration-1000 transform translate-y-48 bg-transparent opacity-100 group-hover:-translate-y-16 ease text-white">
-								<p class="title leading-tight text-shadow text-amber-400">{post.meta.title}</p><br>
-								<p class="">{post.meta.blurb}</p>
-							
-							</span>		
-						</div>
-					</div>
-				</div>
-			</a>
-		{/each}
+	{/each}
 
 	</div>
 </section>
@@ -76,23 +95,23 @@
 }
 
 .top-f70 {
-	top: 70px
+	top: -70px
 }
 
 .top-f140 {
-	top: 140px
+	top: -140px
 }
 
 .top-f210 {
-	top: 210px
+	top: -210px
 }
 
 .top-f280 {
-	top: 280px
+	top: -280px
 }
 
 .top-f350 {
-	top: 350px
+	top: -350px
 }
 
 .left-f0 {
@@ -100,24 +119,34 @@
 }
 
 .left-f70 {
-	left: 70px
+	left: -70px
 }
 
 .left-f140 {
-	left: 140px
+	left: -140px
 }
 
 .left-f210 {
-	left: 210px
+	left: -210px
 }
 
 .left-f280 {
-	left: 280px
+	left: -280px
 }
 
 .left-f350 {
-	left: 350px
+	left: -350px
 }
+
+
+.duration-900 {
+	transition-duration: 900s
+}
+
+.duration-1100 {
+	transition-duration: 1100s
+}
+
 
 .small-card {
 	background-color: transparent;
@@ -135,8 +164,20 @@
 	transform-style: preserve-3d;
   }
   
-  .small-card-parent:hover .small-card-inner {
+  .small-card-parent:hover .small-card-inner-pos {
 	transform: rotateY(180deg);
+  }
+
+  .small-card-back-pos {
+	transform: rotateY(180deg);
+  }
+
+  .small-card-parent:hover .small-card-inner-neg {
+	transform: rotateY(-180deg);
+  }
+
+  .small-card-back-neg {
+	transform: rotateY(-180deg);
   }
   
   .small-card-front, .small-card-back {
@@ -151,9 +192,7 @@
   }
   
   
-  .small-card-back {
-	transform: rotateY(180deg);
-  }
+ 
 
   .cards-gradient {
 	width: 71px;
