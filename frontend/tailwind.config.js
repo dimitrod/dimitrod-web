@@ -6,7 +6,8 @@ export default {
       'display': ['Lato'],
       'body': ['Roboto'],
     },
-    extend: {},
+    extend: {
+    },
   },
   plugins: [],
 }
