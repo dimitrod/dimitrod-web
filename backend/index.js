@@ -1,9 +1,12 @@
 const express = require("express");
+const cors = require("cors");
 const nodemailer = require('nodemailer');
 const app = express();
+
 require('dotenv').config();
 
 app.use(express.json());
+app.use(cors());
 
 const port = process.env.PORT || 5000;
 
@@ -26,15 +29,15 @@ app.post('/api/contact', (req, res) => {
     from: 'contact@dimitrod.com', 
     to: 'dimtrod@gmail.com', 
     subject: req.query.subject,
-    html: req.query.message + "<br><br><br>From: " + req.query.email
+    html: "<br><br>This is a message from dimitrod.com: <br><br>" + req.query.message + "<br><br><br>From: " + req.query.email
   };
-  console.log(req.query);
-  console.log(req.params);
 
   transporter.sendMail(message, (error, info) => {
       if (error) {
           return console.log(error);
       }
+
       res.status(200).send({ message: "Mail send", message_id: info.messageId });
+   
   });
 });
