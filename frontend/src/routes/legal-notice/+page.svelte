@@ -5,14 +5,14 @@
 </script>
 
 <svelte:head>
-	<title>Imprint/Datenschutz - D. Dimitrov</title>
-	<meta name="description" content="Imprint/Datenschutz for the website" />
+	<title>Legal Notice - D. Dimitrov</title>
+	<meta name="description" content="Legal Notice for the website" />
 </svelte:head>
 
 <section class="animate">
 	<div class="py-16 text-column mx-auto max-w-screen-md">
 		<div id="imprint" class="category { colorText }">
-			<h1 class="text-4xl font-extrabold { colorHeadings } pb-4">Imprint</h1>
+			<h1 class="text-4xl font-extrabold { colorHeadings } pb-4">Legal Notice/Impressum</h1>
 
 			<h2 class="{ colorHeadings } font-extrabold pt-12 pb-4">Angaben gemäß § 5 TMG</h2>
 			Dimitar Dimitrov<br>
@@ -24,7 +24,7 @@
 			E-Mail: der_blinde_jo@yahoo.de
 		</div>
 		<div id="dataProtection" class="category text-sm xl:text-base { colorText }" style="display: block;">
-			<h2 class="{ colorHeadings } font-extrabold pt-12 pb-4">Datenschutz<wbr>erklärung</h2>
+			<h2 class="{ colorHeadings } font-extrabold pt-12 pb-4">Data Protection/Datenschutz<wbr>erklärung</h2>
 			Im Folgenden möchten wir Sie aufklären, wie Ihre Daten von uns verarbeitet werden.<br>
 			<br>
 			Verantwortlich im Sinne der DSGVO ist:<br>
