@@ -1,7 +1,10 @@
-export async function load({ params }) {
-	const post = await import(`../../../lib/portfolio-posts/${params.slug}.md`);
-	const { title, image_small, big, type, blurb } = post.metadata;
-	const content = post.default;
+export const load = async ({ fetch, params }) => {
+	const response = await fetch('/api/v1/portfolio-posts/' + params.slug);
+	const post = await response.json();
+
+	const { title, image_small, big, type, blurb } = post.meta;
+	const content = post.body;
+	const slug = post.path;
 
 	return {
 		content,
@@ -9,7 +12,8 @@ export async function load({ params }) {
 		blurb,
         image_small,
         big,
-		type
+		type,
+		slug
 		
 	};
-}
+}; 

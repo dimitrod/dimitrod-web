@@ -24,25 +24,25 @@
 				<div class="small-card">
 
 					{#if i == 0}
-						<div class="w-full small-card-inner small-card-inner-neg duration-150">
+						<div class="w-full small-card-inner small-card-inner-neg duration-700">
 							<div class="overflow-hidden small-card-front cards-gradient">	
-								<img alt="{post.meta.title}" class="absolute top-f{ i * 70 } left-f{ j * 70 } min-w-[355px] h-[355px]" src="/images/{ post.meta.image_small }" >
+								<img alt="{post.meta.title}" class="absolute top-f{ i * 70 } left-f{ j * 70 } min-w-[355px] h-[355px]" src="/images/{ post.path }/{ post.meta.image_small }" >
 						</div>
 						<div class="small-card-back small-card-back-neg bg-violet-950">
 						</div>
 					</div>
      				{:else if i == 1}
-					 	<div class="w-full small-card-inner small-card-inner-neg duration-200">
+					 	<div class="w-full small-card-inner small-card-inner-neg duration-500">
 							<div class="overflow-hidden small-card-front cards-gradient">	
-								<img alt="{post.meta.title}" class="absolute top-f{ i * 70 } left-f{ j * 70 } min-w-[355px] h-[355px]" src="/images/{ post.meta.image_small }" >
+								<img alt="{post.meta.title}" class="absolute top-f{ i * 70 } left-f{ j * 70 } min-w-[355px] h-[355px]" src="/images/{ post.path }/{ post.meta.image_small }" >
 						</div>
 						<div class="small-card-back small-card-back-neg bg-violet-950">
 						</div>
 					</div>
 					{:else if i == 2}
-						<div class="w-full small-card-inner small-card-inner-neg duration-300">
+						<div class="w-full small-card-inner small-card-inner-neg duration-700">
 							<div class="overflow-hidden small-card-front cards-gradient">	
-								<img alt="{post.meta.title}" class="absolute top-f{ i * 70 } left-f{ j * 70 } min-w-[355px] h-[355px]" src="/images/{ post.meta.image_small }" >
+								<img alt="{post.meta.title}" class="absolute top-f{ i * 70 } left-f{ j * 70 } min-w-[355px] h-[355px]" src="/images/{ post.path }/{ post.meta.image_small }" >
 						</div>
 						<div class="small-card-back small-card-back-neg bg-violet-950">
 						</div>
@@ -50,7 +50,7 @@
 					{:else if i == 3}
 						<div class="w-full small-card-inner small-card-inner-neg duration-500">
 							<div class="overflow-hidden small-card-front cards-gradient">	
-								<img alt="{post.meta.title}" class="absolute top-f{ i * 70 } left-f{ j * 70 } min-w-[355px] h-[355px]" src="/images/{ post.meta.image_small }" >
+								<img alt="{post.meta.title}" class="absolute top-f{ i * 70 } left-f{ j * 70 } min-w-[355px] h-[355px]" src="/images/{ post.path }/{ post.meta.image_small }" >
 						</div>
 						<div class="small-card-back small-card-back-neg bg-violet-950">
 						</div>
@@ -58,7 +58,7 @@
 					{:else}
 						<div class="w-full small-card-inner small-card-inner-neg duration-700">
 							<div class="overflow-hidden small-card-front cards-gradient">	
-								<img alt="{post.meta.title}" class="absolute top-f{ i * 70 } left-f{ j * 70 } min-w-[355px] h-[355px]" src="/images/{ post.meta.image_small }" >
+								<img alt="{post.meta.title}" class="absolute top-f{ i * 70 } left-f{ j * 70 } min-w-[355px] h-[355px]" src="/images/{ post.path }/{ post.meta.image_small }" >
 						</div>
 						<div class="small-card-back small-card-back-neg bg-violet-950">
 						</div>
@@ -191,9 +191,6 @@
 	backface-visibility: hidden;
   }
   
-  
- 
-
   .cards-gradient {
 	width: 71px;
 	height: 71px;
@@ -201,62 +198,12 @@
 	background-attachment:fixed;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-	.flip-card {
-		background-color: transparent;
-		width: 352px;
-		height: 352px;
-		perspective: 1000px;
-		font-family: sans-serif;
-	  }
-	  
-	  .title {
+.title {
 		font-size: 2em;
 		font-family: 'Lato', sans-serif;
 		font-weight: 800;
 		text-align: center;
 		margin: 0;
 	  }
-	  
-	  .flip-card-inner {
-		position: relative;
-		width: 100%;
-		height: 100%;
-		text-align: center;
-		transition: transform 0.6s;
-		transform-style: preserve-3d;
-	  }
-	  
-	  .flip-card:hover .flip-card-inner {
-		transform: rotateY(180deg);
-	  }
-	  
-	  .flip-card-front, .flip-card-back {
-		box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
-		position: absolute;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		width: 100%;
-		height: 100%;
-		-webkit-backface-visibility: hidden;
-		backface-visibility: hidden;
-	  }
-	  
-	  .flip-card-back {
-		background: linear-gradient(120deg, red -100%, blue 200%);
-		color: white;
-		transform: rotateY(180deg);
-	  }
+
 </style>

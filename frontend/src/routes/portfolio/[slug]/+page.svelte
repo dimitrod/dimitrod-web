@@ -20,12 +20,12 @@
             <div class="relative mr-0 sm:mr-12">
 				   <h1 class="text-4xl font-extrabold { colorHeadings } pb-4">{data.title}</h1>
                <p class="mb-4 lg:mb-8 text-left { colorText } sm:text-xl">
-                  <svelte:component this={data.content} /></p>  
+                  {@html data.content}</p>  
             </div>
          </div>
          <div class="col-span-0 sm:col-span-1 hidden sm:inline-block">
             <img
-               src="{ "/images/" + data.image_small}"
+               src="{ "/images/" + data.slug + "/" + data.image_small}"
                alt=""
                class="w-full rounded-2xl"
                />
@@ -33,12 +33,12 @@
       </div>
       {#if data.type == "image"}
          <img
-            src="{ "/images/" + data.big}"
+            src="{ "/images/" + data.slug + "/" + data.big}"
             alt=""
             class="w-full mt-8 rounded-2xl"
          />
       {:else if data.type == "video"}
-         <video class="w-full rounded-2xl cursor-pointer h-[393px] object-cover" poster="{ "/images/" + data.image_small}" controls preload="none" onclick="this.play()">
+         <video class="w-full rounded-2xl cursor-pointer h-[393px] object-cover" poster="{ "/images/"+ data.slug + "/" + data.image_small}" controls preload="none" onclick="this.play()">
             <source src="{ "/video/" + data.big}" type="video/mp4">
             Your browser does not support the video tag.
             <track kind="captions" />
@@ -46,7 +46,7 @@
       {:else if data.type == "gallery"}
          <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-8">
             {#each array as item}
-               <img class="h-auto w-full rounded-2xl" src={ "/images/" + item} alt="">
+               <img class="h-auto w-full rounded-2xl" src={ "/images/" + data.slug + "/" + item} alt="">
             {/each}
          </div>
       {/if}
