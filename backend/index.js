@@ -14,7 +14,7 @@ app.listen(port, () => {
     console.log(`Server listening on port ${port}`);
 });
 
-app.post('/api/contact', (req, res) => {
+app.post('/api/v1/contact', (req, res) => {
   let config = {
     service: 'gmail',    
     auth: {
