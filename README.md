@@ -1,6 +1,7 @@
 # dimitrod.com
 
 A basic portoflio website made using SvelteKit and Express.js.
+<br><br>
 
 ## Running it locally 
 
@@ -23,6 +24,7 @@ A basic portoflio website made using SvelteKit and Express.js.
     GMAIL_APP_USER=...<br>
     GMAIL_APP_PASSWORD=...
 6. ```node index```
+<br><br>
 
 ## API endpoints
 
@@ -34,3 +36,28 @@ You can GET a single post (if you have the slug) as a JSON-object at:<br>
 
 You can send a mail to a proxy-email by using POST at:<br>
 ```/api/v1/contact/?email=...&subject=...&message=...```
+<br><br>
+
+## New posts
+
+Create a new markdown file under <br>
+```/dimitrod-web/frontend/static/portfolio-posts```<br>
+
+with the following front matter:
+```
+---
+title: [Title of your post]
+blurb: [This will show up on the portfolio page, keep it short]
+type: [gallery, video or image]
+image_small: '[This will be the main image]'
+big: '[either a big image, video or a comma-separated list of images]'
+---
+```
+<br>
+The name of the markdown-file will become the URL-slug. The images (main, big image and gallery images) should be saved in a folder with the same name as the markdown file at:<br>
+```/dimitrod-web/frontend/static/images/[name_of_markdown_file]```<br>
+the video file should be saved at:<br>
+```/dimitrod-web/frontend/static/video/[name_of_markdown_file]```<br>
+
+
+
