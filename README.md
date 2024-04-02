@@ -26,11 +26,11 @@ A basic portoflio website made using SvelteKit and Express.js.
 
 ## API endpoints
 
-You can GET all posts as a JSON-object at:
+You can GET all posts as a JSON-object at:<br>
 ```/api/v1/portfolio-posts```
 
-You can GET a single post (if you have the slug) as a JSON-object at:
+You can GET a single post (if you have the slug) as a JSON-object at:<br>
 ```/api/v1/portfolio-posts/[slug]``` e.g. ```/api/v1/portfolio-posts/erdulator```
 
-You can send a mail to a proxy-email by using POST at:
+You can send a mail to a proxy-email by using POST at:<br>
 ```/api/v1/contact/?email=...&subject=...&message=...```
