@@ -10,7 +10,7 @@ A basic portfolio website made using SvelteKit and Express.js.
 1. Clone the repo
 2. ```cd dimitrod-web/frontend```
 3. ```npm install```
-4. Change the fetch URL in ```repo/frontend/src/routes/contact/page.svelte``` to ```http://localhost:5000/api/v1/contact/?email=```
+4. Change the fetch URL in ```dimitrod-web/frontend/src/routes/contact/page.svelte``` to ```http://localhost:5000/api/v1/contact/?email=```
 5. ```npm run dev```
 6. Open site at localhost:PORT (see the terminal/console)
 
@@ -20,7 +20,7 @@ A basic portfolio website made using SvelteKit and Express.js.
 2. ```cd dimitrod-web/backend```
 3. ```npm install```
 4. Create an .env file in repo/backend
-5. Put your GMail Username and App-Password in this format in it:<br>
+5. Put your gmail username and app-password in this format in it:<br>
     GMAIL_APP_USER=...<br>
     GMAIL_APP_PASSWORD=...
 6. ```node index```
@@ -34,7 +34,7 @@ You can GET all posts as a JSON-object at:<br>
 You can GET a single post (if you have the slug) as a JSON-object at:<br>
 ```/api/v1/portfolio-posts/[slug]``` e.g. ```/api/v1/portfolio-posts/erdulator```
 
-You can send a mail to a proxy-email by using POST at:<br>
+You can send me a mail from a proxy-email by using POST at:<br>
 ```/api/v1/contact/?email=...&subject=...&message=...```
 <br><br>
 
@@ -62,6 +62,11 @@ The name of the markdown-file will become the URL-slug. The images (main, big im
 
 the video file should be saved at:<br>
 ```/dimitrod-web/frontend/static/video/[name_of_markdown_file]```<br>
+<br><br>
+## Changing the email adresses
 
+Change the email addresses (sender and receiver) on lines 29/30 in <br> ```dimitrod-web/backend/index.js```<br>
+
+The sender should be the account you put in the .env file. Receiver is the account you want to receive the mails at.
 
 
