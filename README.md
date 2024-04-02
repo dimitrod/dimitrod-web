@@ -61,7 +61,7 @@ The name of the markdown-file will become the URL-slug. The images (main, big im
 ```/dimitrod-web/frontend/static/images/[name_of_markdown_file]```<br>
 
 the video file should be saved at:<br>
-```/dimitrod-web/frontend/static/video/[name_of_markdown_file]```<br>
+```/dimitrod-web/frontend/static/video/[name_of_markdown_file]```
 <br><br>
 ## Changing the email adresses
 
