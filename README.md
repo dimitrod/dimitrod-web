@@ -10,7 +10,7 @@ A basic portoflio website made using SvelteKit and Express.js.
 2. ```cd dimitrod-web/frontend```
 3. ```npm install```
 4. Change the fetch URL in ```repo/frontend/src/routes/contact/page.svelte``` to ```localhost:5000/api/v1/contact/?email=```
-5.```npm run dev```
+5. ```npm run dev```
 6. Open site at localhost:PORT (see the terminal/console)
 
 ### Backend
