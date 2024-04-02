@@ -1,6 +1,6 @@
 # dimitrod.com
 
-A basic portoflio website made using SvelteKit and Express.js.
+A basic portfolio website made using SvelteKit and Express.js.
 <br><br>
 
 ## Running it locally 
