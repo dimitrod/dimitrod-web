@@ -43,7 +43,7 @@ You can send a mail to a proxy-email by using POST at:<br>
 Create a new markdown file under <br>
 ```/dimitrod-web/frontend/static/portfolio-posts```<br>
 
-with the following front matter:
+with the following content:
 ```
 ---
 title: [Title of your post]
@@ -52,10 +52,14 @@ type: [gallery, video or image]
 image_small: '[This will be the main image]'
 big: '[either a big image, video or a comma-separated list of images]'
 ---
+
+Here you can write a long description.
 ```
 <br>
 The name of the markdown-file will become the URL-slug. The images (main, big image and gallery images) should be saved in a folder with the same name as the markdown file at:<br>
+
 ```/dimitrod-web/frontend/static/images/[name_of_markdown_file]```<br>
+
 the video file should be saved at:<br>
 ```/dimitrod-web/frontend/static/video/[name_of_markdown_file]```<br>
 
