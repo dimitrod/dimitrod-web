@@ -1,9 +1,7 @@
 <script>
-	import { page } from '$app/stores';
 	import logo from '$lib/images/logo_small.png';
 	import {colorText} from '$lib/colors.svelte';
 	import {colorHover} from '$lib/colors.svelte';
-	import {colorHeadings} from '$lib/colors.svelte';
 </script>
 
 <header class="sticky top-0 flex flex-wrap sm:justify-start sm:flex-nowrap z-50 max-w-screen-md text-sm py-3 sm:py-0 container m-auto bg-pattern">
