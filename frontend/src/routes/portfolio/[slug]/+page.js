@@ -1,3 +1,5 @@
+// fetch the post with the correct slug from the API endpoint
+
 export const load = async ({ fetch, params }) => {
 	const response = await fetch('/api/v1/portfolio-posts/' + params.slug);
 	const post = await response.json();

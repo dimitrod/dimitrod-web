@@ -1,6 +1,5 @@
 <script>
 	import {colorText} from '$lib/colors.svelte';
-	import {colorHover} from '$lib/colors.svelte';
 	import {colorHeadings} from '$lib/colors.svelte';
 </script>
 

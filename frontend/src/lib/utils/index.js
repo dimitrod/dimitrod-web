@@ -1,7 +1,11 @@
+// helper function fetching all markdown files in the portfolio-posts folder
+
 export const fetchMarkdownPosts = async () => {
 	const allPostFiles = import.meta.glob('/static/portfolio-posts/*.md');
 	const iterablePostFiles = Object.entries(allPostFiles);
 
+	// save (and later return) all posts in a variable, with child-entries for metadata, content and path/slug
+	
 	const allPosts = await Promise.all(
 		iterablePostFiles.map(async ([path, resolver]) => {
 			// @ts-ignore

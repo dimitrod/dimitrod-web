@@ -1,7 +1,5 @@
 <script>
 	import logo from '$lib/images/logo_test.png';
-	import {colorText} from '$lib/colors.svelte';
-	import {colorHover} from '$lib/colors.svelte';
 	import {colorHeadings} from '$lib/colors.svelte';
 </script>
 

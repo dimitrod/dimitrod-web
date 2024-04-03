@@ -1,7 +1,6 @@
 <script>
 	import aboutImage from '$lib/images/about_02.png';
 	import {colorText} from '$lib/colors.svelte';
-	import {colorHover} from '$lib/colors.svelte';
 	import {colorHeadings} from '$lib/colors.svelte';
 </script>
 

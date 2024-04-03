@@ -1,9 +1,4 @@
 <script>
-	import {colorText} from '$lib/colors.svelte';
-	import {colorHover} from '$lib/colors.svelte';
-	import {colorHeadings} from '$lib/colors.svelte';
-	import erdImage from '$lib/images/erdulator_game.png';
-
 	export let data;
 </script>
 
@@ -16,8 +11,8 @@
 
 	{#each data.posts as post}
 	<a href="/portfolio/{post.path}" class="mt-8 mr-8 grid grid-cols-5 gap-0 small-card-parent rounded-lg w-[354px] overflow-hidden group relative ring-offset-black hover:ring-2 hover:ring-offset-2 hover:ring-pink-500 transition-all ease-out duration-300">
-		<!--<span class="absolute z-30 right-0 w-8 h-48 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-30 rotate-12 group-hover:-translate-x-40 ease"></span>-->
-		
+
+		<!-- Some ugly loops for the flipping cards, took a bit to figure out -->
 		{#each Array(5) as _, j}
 			<div class="col-span-1 w-auto m-0 p-0">
 				{#each Array(5) as _, i}

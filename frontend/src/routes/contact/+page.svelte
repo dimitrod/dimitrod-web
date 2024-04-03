@@ -1,11 +1,23 @@
 <script>
 	import {colorText} from '$lib/colors.svelte';
-	import {colorHover} from '$lib/colors.svelte';
 	import {colorHeadings} from '$lib/colors.svelte';
 
 	let email = ''
 	let subject = ''
 	let message = ''
+
+	// check if form was filled out correctly
+
+	function formValidty () {
+		let form = /** @type {HTMLInputElement} */ (document.getElementById("contact-form"));
+
+		if (form.checkValidity() == true) {
+			sendMail ();
+
+		}
+	}
+
+	// then send a post request to the email API endpoint
 
 	async function sendMail () {
 
@@ -15,6 +27,9 @@
             'Content-Type':'x-www-form-urlencoded',
 			},
 		})	
+
+
+	// and change the button if it was sent correctly or if there was an error
 
 		let button = /** @type {HTMLButtonElement} */ (document.getElementById("send"));
 
@@ -40,14 +55,7 @@
 
 	}
 
-	function formValidty () {
-		let form = /** @type {HTMLInputElement} */ (document.getElementById("contact-form"));
 
-		if (form.checkValidity() == true) {
-			sendMail ();
-
-		}
-	}
 
 </script>
 

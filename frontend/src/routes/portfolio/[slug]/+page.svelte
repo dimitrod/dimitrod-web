@@ -1,7 +1,6 @@
 <script>
    export let data;
 	import {colorText} from '$lib/colors.svelte';
-	import {colorHover} from '$lib/colors.svelte';
 	import {colorHeadings} from '$lib/colors.svelte';
 
    let str = data.big;
