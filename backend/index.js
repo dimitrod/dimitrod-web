@@ -45,7 +45,7 @@ app.post('/api/v1/contact', (req, res) => {
 
   let message = {
     from: 'contact@dimitrod.com', 
-    to: 'dimtrod@gmail.com', 
+    to: 'contact@dimitrod.com', 
     subject: req.query.subject,
     html: "<br><br>This is a message from dimitrod.com: <br><br>" + req.query.message + "<br><br><br>From: " + req.query.email
   };
